@@ -16,9 +16,22 @@
 
 </head>
 <body>
-    <div class="container text-center">
-        <h1>Midterm Survey</h1>
-        <a type="button" class="btn btn-primary" href="survey">Start Survey</a>
-    </div>
+<div class="container text-center">
+    <h1>Midterm Survey test</h1>
+    <form action="#" method="POST">
+        <div class="form-group row">
+            <label for="nameIn" class="col-sm-3 col-form-label">Name</label>
+            <div class="col-sm-8">
+                <input class="form-control" name="nameIn" type="text" id="nameIn">
+            </div>
+        </div>
+        <repeat group="{{@checks}}" key="{{@short}}" value="{{@long}}">
+            <label><input type="checkbox" value="{{@short}}">{{@long}}</label><br>
+        </repeat>
+        <div class="d-flex justify-content-center me-5">
+            <button class="btn btn-primary col-4" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
 </body>
 </html>
